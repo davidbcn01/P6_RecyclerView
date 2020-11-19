@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recyclerPlatosFragment">
+
+    <fragment
+        android:id="@+id/recyclerPlatosFragment"
+        android:name="com.company.recyclerview.RecyclerPlatosFragment"
+        android:label="fragment_recycler_platos"
+        tools:layout="@layout/fragment_recycler_platos" >
+        <action
+            android:id="@+id/action_recyclerPlatosFragment_to_mostrarPlatosFragment"
+            app:destination="@id/mostrarPlatosFragment" />
+        <action
+            android:id="@+id/action_recyclerPlatosFragment_to_nuevoPlatoFragment"
+            app:destination="@id/nuevoPlatoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nuevoPlatoFragment"
+        android:name="com.company.recyclerview.NuevoPlatoFragment"
+        android:label="fragment_nuevo_plato"
+        tools:layout="@layout/fragment_nuevo_plato" />
+    <fragment
+        android:id="@+id/mostrarPlatosFragment"
+        android:name="com.company.recyclerview.MostrarPlatoFragment"
+        android:label="fragment_mostrar_plato"
+        tools:layout="@layout/fragment_mostrar_plato" />
+</navigation>
